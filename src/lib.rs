@@ -16,7 +16,7 @@ pub struct Integrator {
 
 impl Integrator {
      pub fn new(damping: f64) -> Self {
-         let giromagnetic_ratio = 1.0; // 1.760859644e-11; // rad S^-1 T^-1
+         let giromagnetic_ratio = 1.0; // 1.760859644e-11; // rad s^-1 T^-1
          Self {
              damping: damping,
              giromagnetic_ratio: giromagnetic_ratio,
