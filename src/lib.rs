@@ -15,9 +15,9 @@ pub struct Integrator {
 
 
 impl Integrator {
-     pub fn new(damping: f64) -> Self {
+     pub fn new(damping: f64) -> Integrator {
          let giromagnetic_ratio = 1.0; // 1.760859644e-11; // rad s^-1 T^-1
-         Self {
+         Integrator {
              damping: damping,
              giromagnetic_ratio: giromagnetic_ratio,
              prefactor: giromagnetic_ratio / (1.0f64 + damping * damping),
@@ -25,7 +25,7 @@ impl Integrator {
      }
 
      pub fn critical() -> Integrator {
-         Self::new(1.0f64)
+         Integrator::new(1.0f64)
      }
 
      /// Little wrapper for that ugly delta function
